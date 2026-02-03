@@ -25,7 +25,7 @@ class _NewItemsState extends State<NewItems> {
   var _selectedCategory = categories[Categories.vegetables]!;
   var _isSending = false;
 
-  // to Save an items
+  // to Save an items in fireBase using Post API
   void _saveItem() async {
     if (_formkey.currentState!.validate()) {
       _formkey.currentState!.save();
@@ -58,6 +58,7 @@ class _NewItemsState extends State<NewItems> {
         return;
       }
 
+      // See data on Screen when all requirement is done and back to the main Screen 
       Navigator.of(context).pop(
         GroceryItem(
           id: resData['name'],

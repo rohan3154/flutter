@@ -26,7 +26,7 @@ class _GrosaryListState extends State<GrosaryList> {
     super.initState();
   }
 
-  // load data
+  // load data form the dataBase
   void _loadItem() async {
     final url = Uri.https(
       'flutter-prep-fba21-default-rtdb.firebaseio.com',
